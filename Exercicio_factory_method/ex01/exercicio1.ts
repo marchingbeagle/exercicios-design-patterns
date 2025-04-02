@@ -20,7 +20,7 @@ enum NotificationType {
 }
 
 class NotificationFactory {
-  createNotification(type: NotificationType): CustomNotification {
+  createNotification(type: String | NotificationType): CustomNotification {
     switch (type) {
       case NotificationType.EMAIL:
         return new EmailNotification();
